@@ -1,0 +1,77 @@
+*{ margin: 0px; box-sizing: border-box;}
+
+body{
+    position: relative;
+    z-index: 1;
+    font-family: sans-serif;
+    
+}
+canvas {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+main {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+    width: 100%;
+
+    font-size: 32px;
+    color: #fff;
+    
+    padding: 5vw;
+
+    display: flex;
+    flex-direction: column;
+}
+main section {
+    width: 50%;
+    padding: 100px 0px;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+}
+
+main section p {
+    padding: 5%;
+    
+}
+main section:nth-child(2) { margin-left: 50%; }
+main section:nth-child(4) { margin-left: 50%; }
+
+title {
+    font-size: 36px;
+    color:#00ffff
+}
+
+.sign-wrap-2 {
+    background: #337AB7;
+    text-align: center;
+    padding: 60px 20px;
+}
+.sign-wrap-2 .sign_word {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    animation: 2s neon-2 alternate-reverse infinite;
+}
+@keyframes neon-2 {
+    from {
+        text-shadow: 0 0 5px #FFF,
+        0 0 10px #FFF,
+        0 0 15px #FFF,
+        0 0 20px #BFE2FF;
+    }
+    to {
+        text-shadow: 0 0 20px #BFE2FF,
+        0 0 35px #BFE2FF,
+        0 0 40px #BFE2FF,
+        0 0 50px #BFE2FF,
+        0 0 800px #BFE2FF;
+    }
+}    
