@@ -15,7 +15,7 @@ renderer.setClearColor( 0xffffff, 0);
 document.body.appendChild( renderer.domElement );
 window.addEventListener('resize', () => {
     renderer.setSize( window.innerWidth, window.innerHeight);
-    scene.add(earth);
+    scene.add(rusGidro);
 });
 
 // Глобальное освещение
@@ -31,42 +31,55 @@ cube.rotation.x = 10;
 scene.add(cube); */
 
 
-// Настройки Венеры
-const veneraTexture = new THREE.TextureLoader().load('images/venera.jpg');
-const venera = new THREE.Mesh(
-	new THREE.SphereGeometry(1, 64, 64),
+// Настройки arMoscow
+const arMoscowTexture = new THREE.TextureLoader().load('../images/sites/ar.moscow_.png');
+const arMoscow = new THREE.Mesh(
+	new THREE.SphereGeometry(1, 32, 32),
 	new THREE.MeshStandardMaterial({
-		map: veneraTexture,
+		map: arMoscowTexture,
 	})
 );
-venera.position.z = -20;
-venera.position.x = 3;
-venera.position.y = 3;
-scene.add(venera);
+arMoscow.position.z = -10;
+arMoscow.position.x = 4;
+arMoscow.position.y = -1;
+scene.add(arMoscow);
 
-// Настройки земли
-const earthTexture = new THREE.TextureLoader().load('images/01-3.png');
-const earth = new THREE.Mesh(
+// Настройки rusGidro
+const rusGidroTexture = new THREE.TextureLoader().load('../images/sites/rusgidro.png');
+const rusGidro = new THREE.Mesh(
 	new THREE.BoxGeometry(),
 	new THREE.MeshStandardMaterial({
-		map: earthTexture,
+		map: rusGidroTexture,
 	})
 );
-earth.position.z = -5;
-scene.add(earth);
+rusGidro.position.z = -4;
+scene.add(rusGidro);
 
-// Настройки Марса
-const marsTexture = new THREE.TextureLoader().load('images/mars.png');
-const mars = new THREE.Mesh(
+// Настройки Rutek
+const boxCodeTexture = new THREE.TextureLoader().load('../images/code.jpg');
+const boxCode = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({
-		map: marsTexture,
+		map: boxCodeTexture,
 	})
 );
-mars.position.z = -30;
-mars.position.x = -20;
-mars.position.y = -4;
-scene.add(mars);
+boxCode.position.z = -20;
+boxCode.position.x = -5;
+boxCode.position.y = 4;
+scene.add(boxCode);
+
+// Настройки Rutek
+const rutekTexture = new THREE.TextureLoader().load('../images/sites/rutek-group.ru_.png');
+const rutek = new THREE.Mesh(
+	new THREE.SphereGeometry(1, 64, 64),
+	new THREE.MeshStandardMaterial({
+		map: rutekTexture,
+	})
+);
+rutek.position.z = -10;
+rutek.position.x = -5;
+rutek.position.y = -4;
+scene.add(rutek);
 
 // Добавление звезд на фоне
 function addStar() {
@@ -85,17 +98,22 @@ Array(400).fill().forEach(addStar);
 function animate() {
 	requestAnimationFrame(animate);
 
-	earth.rotation.y += 0.003;
-	earth.rotation.x += 0.002;
-	earth.rotation.z += 0.002;
+	rusGidro.rotation.y += 0.003;
+	rusGidro.rotation.x += 0.002;
+	rusGidro.rotation.z += 0.002;
 
-    venera.rotation.y -= 0.003;
-	venera.rotation.x -= 0.002;
-	venera.rotation.z -= 0.002;
+    arMoscow.rotation.y += 0.003;
+	arMoscow.rotation.x += 0.002;
+	arMoscow.rotation.z += 0.002;
 
-    mars.rotation.y += 0.003;
-	mars.rotation.x += 0.002;
-	mars.rotation.z += 0.003;
+    rutek.rotation.y += 0.003;
+	rutek.rotation.x += 0.002;
+	rutek.rotation.z += 0.003;
+
+	
+	boxCode.rotation.y += 0.003;
+	boxCode.rotation.x += 0.002;
+	boxCode.rotation.z += 0.003;
 
 	renderer.render(scene, camera);
 }
@@ -107,23 +125,23 @@ document.body.onscroll = handlerScroll;
 function handlerScroll() {
 	const t = document.body.getBoundingClientRect().top;
 
-	if(venera.rotation.y > 0 && venera.rotation.x > 0) {
-		venera.rotation.y -= 0.01;
-		venera.rotation.x -= 0.01;
+	/* if(arMoscow.rotation.y > 0 && arMoscow.rotation.x > 0) {
+		arMoscow.rotation.y -= 0.01;
+		arMoscow.rotation.x -= 0.01;
 	}
 
 
 	if ( camera.position.z < -1.4 ) {
-		venera.rotation.y = 0;
-		venera.rotation.x = 0;
-		if( earth.position.x > -0.8 ) {
-			earth.position.x -= 0.02;
-            mars.position.x += 0.02;
-            mars.position.y += 0.01;
+		arMoscow.rotation.y = 0;
+		arMoscow.rotation.x = 0;
+		if( rusGidro.position.x > -0.8 ) {
+			rusGidro.position.x -= 0.02;
+            rutek.position.x += 0.02;
+            rutek.position.y += 0.01;
 		}
 	} else {
-		earth.position.x = 0;
-	}
+		rusGidro.position.x = 0;
+	} */
 
 	camera.position.z = t * 0.001;
 }

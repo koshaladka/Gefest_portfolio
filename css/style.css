@@ -38,7 +38,7 @@ main {
 main section {
   width: 50%;
   padding: 100px 0px;
-  height: 100vh;
+  min-height: 100vh;
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -83,6 +83,12 @@ main section:nth-child(4) {
   color: #FFF;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
+}
+
+.sign-wrap-4 .sign_word2 span {
+  -webkit-animation: neon-4 linear infinite 2.5s;
+          animation: neon-4 linear infinite 2.5s;
 }
 
 .sign-wrap-4 .sign_word3 {
@@ -165,10 +171,23 @@ main section:nth-child(4) {
 }
 
 .screen a {
-  color: #fff;
+  width: 80%;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
+  letter-spacing: 0.1em;
 }
 
-.screen img {
+.screen a span {
+  -webkit-animation: neon-4 linear infinite 2s;
+          animation: neon-4 linear infinite 2s;
+}
+
+.screen a img {
   margin-top: 20px;
   width: 80%;
   opacity: 0.7;
