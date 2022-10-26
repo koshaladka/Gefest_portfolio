@@ -54,6 +54,14 @@ main section:nth-child(4) {
   margin-left: 50%;
 }
 
+main section:nth-child(6) {
+  margin-left: 50%;
+}
+
+main section:nth-child(8) {
+  margin-left: 50%;
+}
+
 .sign-wrap-4 {
   /*  background: #337AB7; */
   /* text-align: center;
