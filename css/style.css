@@ -10,6 +10,12 @@ body {
   font-family: sans-serif;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+}
+
 canvas {
   position: fixed;
   z-index: 2;
@@ -36,30 +42,32 @@ main {
 }
 
 main section {
-  width: 50%;
-  padding: 100px 0px;
+  width: 90%;
+  padding: 100px 10px;
   min-height: 100vh;
   background: rgba(0, 0, 0, 0.6);
+  /*  @media (min-width: 767px) {
+        width: 50%;
+    }  */
 }
 
 main section p {
-  padding: 5%;
+  padding: 2%;
 }
 
-main section:nth-child(2) {
-  margin-left: 50%;
-}
-
-main section:nth-child(4) {
-  margin-left: 50%;
-}
-
-main section:nth-child(6) {
-  margin-left: 50%;
-}
-
-main section:nth-child(8) {
-  margin-left: 50%;
+@media (min-width: 767px) {
+  main section:nth-child(2) {
+    margin-left: 50%;
+  }
+  main section:nth-child(4) {
+    margin-left: 50%;
+  }
+  main section:nth-child(6) {
+    margin-left: 50%;
+  }
+  main section:nth-child(8) {
+    margin-left: 50%;
+  }
 }
 
 .sign-wrap-4 {
@@ -69,43 +77,34 @@ main section:nth-child(8) {
   margin-top: 40px;
 }
 
-.sign-wrap-4 .sign_word {
+.sign-wrap-4 .sign_word, .sign-wrap-4 .sign_word2 {
   font-size: 40px;
   font-weight: bold;
   line-height: 50px;
-  color: #FFF;
+  color: #F0F0F0;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.5em #bfe2ff, 0 0 0.1em #bfe2ff;
 }
 
-.sign-wrap-4 .sign_word span {
+.sign-wrap-4 .sign_word span, .sign-wrap-4 .sign_word2 span {
   -webkit-animation: neon-4 linear infinite 2s;
           animation: neon-4 linear infinite 2s;
 }
 
 .sign-wrap-4 .sign_word2 {
   font-size: 25px;
-  font-weight: bold;
-  line-height: 50px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
-}
-
-.sign-wrap-4 .sign_word2 span {
-  -webkit-animation: neon-4 linear infinite 2.5s;
-          animation: neon-4 linear infinite 2.5s;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
 }
 
 .sign-wrap-4 .sign_word3 {
   font-size: 30px;
   font-weight: bold;
   line-height: 50px;
-  color: #FFF;
+  color: #F0F0F0;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
 }
 
 @-webkit-keyframes neon-4 {
@@ -198,6 +197,6 @@ main section:nth-child(8) {
 .screen a img {
   margin-top: 20px;
   width: 80%;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */

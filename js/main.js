@@ -2,7 +2,7 @@ import * as THREE from './../node_modules/three/build/three.module.js';
 
 // Настройки сцены
 const scene = new THREE.Scene();
-const spaceTexture = new THREE.TextureLoader().load('images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./images/space.jpg');
 scene.background = spaceTexture;
 
 // Настройка камеры
@@ -32,7 +32,7 @@ scene.add(cube); */
 
 
 // Настройки arMoscow
-const arMoscowTexture = new THREE.TextureLoader().load('../images/sites/ar.moscow_.png');
+const arMoscowTexture = new THREE.TextureLoader().load('./images/neon.jpg');
 const arMoscow = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 32, 32),
 	new THREE.MeshStandardMaterial({
@@ -45,7 +45,7 @@ arMoscow.position.y = -1;
 scene.add(arMoscow);
 
 // Настройки rusGidro
-const rusGidroTexture = new THREE.TextureLoader().load('../images/sites/rusgidro.png');
+const rusGidroTexture = new THREE.TextureLoader().load('./images/neon2.jpg');
 const rusGidro = new THREE.Mesh(
 	new THREE.BoxGeometry(),
 	new THREE.MeshStandardMaterial({
@@ -55,8 +55,19 @@ const rusGidro = new THREE.Mesh(
 rusGidro.position.z = -4;
 scene.add(rusGidro);
 
-// Настройки Rutek
-const boxCodeTexture = new THREE.TextureLoader().load('../images/code.jpg');
+// Настройки Box4
+const box4Texture = new THREE.TextureLoader().load('./images/neon4.jpg');
+const box4 = new THREE.Mesh(
+	new THREE.BoxGeometry(),
+	new THREE.MeshStandardMaterial({
+		map: box4Texture,
+	})
+);
+box4.position.z = -14;
+scene.add(box4);
+
+// Настройки boxCode
+const boxCodeTexture = new THREE.TextureLoader().load('./images/code.jpg');
 const boxCode = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({
@@ -68,8 +79,8 @@ boxCode.position.x = -5;
 boxCode.position.y = 4;
 scene.add(boxCode);
 
-// Настройки Rutek
-const rutekTexture = new THREE.TextureLoader().load('../images/sites/rutek-group.ru_.png');
+// Настройки rutek
+const rutekTexture = new THREE.TextureLoader().load('./images/neon3.jpg');
 const rutek = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({
@@ -114,6 +125,11 @@ function animate() {
 	boxCode.rotation.y += 0.003;
 	boxCode.rotation.x += 0.002;
 	boxCode.rotation.z += 0.003;
+
+	
+	box4.rotation.y += 0.003;
+	box4.rotation.x += 0.002;
+	box4.rotation.z += 0.003;
 
 	renderer.render(scene, camera);
 }

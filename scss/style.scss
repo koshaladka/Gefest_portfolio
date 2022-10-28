@@ -6,6 +6,12 @@ body{
     font-family: sans-serif;
     
 }
+
+.navbar {
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+}
 canvas {
     position: fixed;
     z-index: 2;
@@ -28,20 +34,27 @@ main {
     flex-direction: column;
 }
 main section {
-    width: 50%;
-    padding: 100px 0px;
+    width: 90%;
+    padding: 100px 10px;
     min-height: 100vh;
     background: rgba(0,0,0,0.6);
+   /*  @media (min-width: 767px) {
+        width: 50%;
+    }  */
 }
 
 main section p {
-    padding: 5%;
+    padding: 2%;
     
 }
-main section:nth-child(2) { margin-left: 50%; }
-main section:nth-child(4) { margin-left: 50%; }
-main section:nth-child(6) { margin-left: 50%; }
-main section:nth-child(8) { margin-left: 50%; }
+
+@media (min-width: 767px) {
+    main section:nth-child(2) { margin-left: 50%; }
+    main section:nth-child(4) { margin-left: 50%; }
+    main section:nth-child(6) { margin-left: 50%; }
+    main section:nth-child(8) { margin-left: 50%; }
+}
+
 
 
 
@@ -52,75 +65,73 @@ main section:nth-child(8) { margin-left: 50%; }
     /* text-align: center;
     padding: 30px 20px; */
     margin-top: 40px;
-}
-.sign-wrap-4 .sign_word {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 50px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
-}
-.sign-wrap-4 .sign_word span {
-    animation: neon-4 linear infinite 2s;
-}
 
-.sign-wrap-4 .sign_word2 {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 50px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
-   
-}
-.sign-wrap-4 .sign_word2 span {
-    animation: neon-4 linear infinite 2.5s;
-}
+    .sign_word, .sign_word2 {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 50px;
+        color: #F0F0F0;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.5em #bfe2ff, 0 0 0.1em #bfe2ff;
 
-.sign-wrap-4 .sign_word3 {
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 50px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-   
-}
+        span {
+            animation: neon-4 linear infinite 2s;
+        }
+    }
+    
+    
+    .sign_word2 {
+        font-size: 25px;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
+    }
+    
+    
+    .sign_word3 {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 50px;
+        color: #F0F0F0;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
+       
+    }
+    
+    @keyframes neon-4 {
+        78% {
+            color: inherit;
+            text-shadow: inherit;
+        }
+        79%{
+            color: #0b3960;
+        }
+        80% {
+            text-shadow: none;
+        }
+        81% {
+            color: inherit;
+            text-shadow: inherit;
+        }
+        82% {
+            color: #0b3960;
+            text-shadow: none;
+        }
+        83% {
+            color: inherit;
+            text-shadow: inherit;
+        }
+        92% {
+            color: #0b3960;
+            text-shadow: none;
+        }
+        92.5% {
+            color: inherit;
+            text-shadow: inherit;
+        }
+    }
+    
 
-@keyframes neon-4 {
-    78% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-    79%{
-        color: #0b3960;
-    }
-    80% {
-        text-shadow: none;
-    }
-    81% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-    82% {
-        color: #0b3960;
-        text-shadow: none;
-    }
-    83% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-    92% {
-        color: #0b3960;
-        text-shadow: none;
-    }
-    92.5% {
-        color: inherit;
-        text-shadow: inherit;
-    }
 }
 
 .screen {
@@ -143,7 +154,7 @@ main section:nth-child(8) { margin-left: 50%; }
         img {
             margin-top: 20px;
             width: 80%;
-            opacity: 0.7;
+            opacity: 0.8;
         }
     }
   
