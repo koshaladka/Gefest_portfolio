@@ -12,6 +12,11 @@ body{
     z-index: 6;
     width: 100%;
 }
+
+.bg-dark {
+    --bs-bg-opacity: 0.5; 
+}
+
 canvas {
     position: fixed;
     z-index: 2;
@@ -38,9 +43,9 @@ main section {
     padding: 100px 10px;
     min-height: 100vh;
     background: rgba(0,0,0,0.6);
-   /*  @media (min-width: 767px) {
+    @media (min-width: 767px) {
         width: 50%;
-    }  */
+    }  
 }
 
 main section p {
