@@ -61,7 +61,15 @@ main section p {
 }
 
 
-
+.map {
+    width: 90%;
+    margin: 0 auto;
+    iframe {
+        margin: 0 auto;
+        opacity: 0.7;
+    }
+   
+}
 
 
 

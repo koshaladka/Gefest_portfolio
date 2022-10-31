@@ -32,7 +32,7 @@ scene.add(cube); */
 
 
 // Настройки arMoscow
-const arMoscowTexture = new THREE.TextureLoader().load('./images/neon.jpg');
+const arMoscowTexture = new THREE.TextureLoader().load('./images/neon7.jpg');
 const arMoscow = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 32, 32),
 	new THREE.MeshStandardMaterial({
@@ -42,10 +42,11 @@ const arMoscow = new THREE.Mesh(
 arMoscow.position.z = -10;
 arMoscow.position.x = 4;
 arMoscow.position.y = -1;
+arMoscow.scale.set(0.5, 0.5, 0.5);
 scene.add(arMoscow);
 
 // Настройки rusGidro
-const rusGidroTexture = new THREE.TextureLoader().load('./images/neon2.jpg');
+const rusGidroTexture = new THREE.TextureLoader().load('./images/neon3.jpg');
 const rusGidro = new THREE.Mesh(
 	new THREE.BoxGeometry(),
 	new THREE.MeshStandardMaterial({
@@ -67,7 +68,7 @@ box4.position.z = -14;
 scene.add(box4);
 
 // Настройки boxCode
-const boxCodeTexture = new THREE.TextureLoader().load('./images/code.jpg');
+const boxCodeTexture = new THREE.TextureLoader().load('./images/space2.jpg');
 const boxCode = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({
@@ -95,7 +96,7 @@ scene.add(rutek);
 // Добавление звезд на фоне
 function addStar() {
 	const geometry = new THREE.SphereGeometry(0.1, 16, 16);
-	const material = new THREE.MeshStandardMaterial({ color: 0x2cf0e8 });
+	const material = new THREE.MeshStandardMaterial({ color: 0xe103d1 });
 	const star = new THREE.Mesh(geometry, material);
 
 	const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(90));
