@@ -2,7 +2,7 @@ import * as THREE from './../node_modules/three/build/three.module.js';
 
 // Настройки сцены
 const scene = new THREE.Scene();
-const spaceTexture = new THREE.TextureLoader().load('./images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./images/space.svg');
 scene.background = spaceTexture;
 
 // Настройка камеры
@@ -32,7 +32,7 @@ scene.add(cube); */
 
 
 // Настройки arMoscow
-const arMoscowTexture = new THREE.TextureLoader().load('./images/neon7.jpg');
+const arMoscowTexture = new THREE.TextureLoader().load('./images/333.jpg');
 const arMoscow = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 32, 32),
 	new THREE.MeshStandardMaterial({
@@ -46,9 +46,9 @@ arMoscow.scale.set(0.5, 0.5, 0.5);
 scene.add(arMoscow);
 
 // Настройки rusGidro
-const rusGidroTexture = new THREE.TextureLoader().load('./images/neon3.jpg');
+const rusGidroTexture = new THREE.TextureLoader().load('./images/333.jpg');
 const rusGidro = new THREE.Mesh(
-	new THREE.BoxGeometry(),
+	new THREE.SphereGeometry(1, 32, 32),
 	new THREE.MeshStandardMaterial({
 		map: rusGidroTexture,
 	})
@@ -57,9 +57,9 @@ rusGidro.position.z = -4;
 scene.add(rusGidro);
 
 // Настройки Box4
-const box4Texture = new THREE.TextureLoader().load('./images/neon4.jpg');
+const box4Texture = new THREE.TextureLoader().load('./images/333.jpg');
 const box4 = new THREE.Mesh(
-	new THREE.BoxGeometry(),
+	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({
 		map: box4Texture,
 	})
@@ -68,7 +68,7 @@ box4.position.z = -14;
 scene.add(box4);
 
 // Настройки boxCode
-const boxCodeTexture = new THREE.TextureLoader().load('./images/space2.jpg');
+const boxCodeTexture = new THREE.TextureLoader().load('./images/333.jpg');
 const boxCode = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({
@@ -81,7 +81,7 @@ boxCode.position.y = 4;
 scene.add(boxCode);
 
 // Настройки rutek
-const rutekTexture = new THREE.TextureLoader().load('./images/neon3.jpg');
+const rutekTexture = new THREE.TextureLoader().load('./images/333.jpg');
 const rutek = new THREE.Mesh(
 	new THREE.SphereGeometry(1, 64, 64),
 	new THREE.MeshStandardMaterial({

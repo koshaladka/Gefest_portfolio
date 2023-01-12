@@ -1,7 +1,6 @@
 * {
   margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -36,13 +35,8 @@ main {
   font-size: 32px;
   color: #fff;
   padding: 5vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 main section {
@@ -51,7 +45,6 @@ main section {
   min-height: 100vh;
   background: rgba(0, 0, 0, 0.6);
 }
-
 @media (min-width: 767px) {
   main section {
     width: 50%;
@@ -76,77 +69,63 @@ main section p {
     margin-left: 50%;
   }
 }
+.map {
+  width: 90%;
+  margin: 0 auto;
+}
+.map iframe {
+  margin: 0 auto;
+  opacity: 0.7;
+}
 
 .sign-wrap-4 {
   /*  background: #337AB7; */
   /* text-align: center;
-    padding: 30px 20px; */
+  padding: 30px 20px; */
   margin-top: 40px;
 }
-
 .sign-wrap-4 .sign_word, .sign-wrap-4 .sign_word2 {
-  font-size: 40px;
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 51px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  /* font-size: 40px;
   font-weight: bold;
   line-height: 50px;
   color: #F0F0F0;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.5em #bfe2ff, 0 0 0.1em #bfe2ff;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.5em #bfe2ff, 0 0 0.1em #bfe2ff; */
 }
-
 .sign-wrap-4 .sign_word span, .sign-wrap-4 .sign_word2 span {
-  -webkit-animation: neon-4 linear infinite 2s;
-          animation: neon-4 linear infinite 2s;
+  animation: neon-4 linear infinite 2s;
 }
-
 .sign-wrap-4 .sign_word2 {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 300;
   font-size: 25px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #972B93;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
 }
-
 .sign-wrap-4 .sign_word3 {
+  font-family: "TT Norms Pro";
+  font-style: normal;
   font-size: 30px;
   font-weight: bold;
   line-height: 50px;
   color: #F0F0F0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
 }
-
-@-webkit-keyframes neon-4 {
-  78% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-  79% {
-    color: #0b3960;
-  }
-  80% {
-    text-shadow: none;
-  }
-  81% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-  82% {
-    color: #0b3960;
-    text-shadow: none;
-  }
-  83% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-  92% {
-    color: #0b3960;
-    text-shadow: none;
-  }
-  92.5% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-}
-
 @keyframes neon-4 {
   78% {
     color: inherit;
@@ -183,27 +162,43 @@ main section p {
 .screen {
   text-align: center;
 }
-
 .screen a {
   width: 80%;
-  font-size: 25px;
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: underline;
+  color: #FFFFFF;
+  /* font-size: 25px;
   font-weight: bold;
   line-height: 50px;
   color: #FFF;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1em; */
 }
-
 .screen a span {
-  -webkit-animation: neon-4 linear infinite 2s;
-          animation: neon-4 linear infinite 2s;
+  animation: neon-4 linear infinite 2s;
 }
-
 .screen a img {
   margin-top: 20px;
   width: 80%;
   opacity: 0.8;
 }
-/*# sourceMappingURL=style.css.map */
+
+h2, .navbar-brand {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.accent_color {
+  color: #972B93;
+}/*# sourceMappingURL=style.css.map */

@@ -79,14 +79,25 @@ main section p {
     padding: 30px 20px; */
     margin-top: 40px;
 
+
     .sign_word, .sign_word2 {
-        font-size: 40px;
+
+        font-family: 'TT Norms Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 51px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.2em;
+
+        color: #FFFFFF;
+        /* font-size: 40px;
         font-weight: bold;
         line-height: 50px;
         color: #F0F0F0;
         font-family: 'Roboto', sans-serif;
         text-transform: uppercase;
-        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.5em #bfe2ff, 0 0 0.1em #bfe2ff;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.5em #bfe2ff, 0 0 0.1em #bfe2ff; */
 
         span {
             animation: neon-4 linear infinite 2s;
@@ -94,13 +105,25 @@ main section p {
     }
     
     
-    .sign_word2 {
+    .sign_word2 { 
+      
+
+        font-family: 'TT Norms Pro';
+        font-style: normal;
+        font-weight: 300;
         font-size: 25px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.2em;
+
+        color: #972B93;
         text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.001em #bfe2ff, 0 0 0.01em #bfe2ff, 0 0 0.1em #bfe2ff;
     }
     
     
     .sign_word3 {
+        font-family: 'TT Norms Pro';
+        font-style: normal;
         font-size: 30px;
         font-weight: bold;
         line-height: 50px;
@@ -151,14 +174,25 @@ main section p {
     text-align: center;
     a {
         width: 80%;
-        font-size: 25px;
+
+        font-family: 'TT Norms Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-decoration: underline;
+        color: #FFFFFF;
+
+        /* font-size: 25px;
         font-weight: bold;
         line-height: 50px;
         color: #FFF;
         font-family: 'Roboto', sans-serif;
         text-transform: uppercase;
         text-shadow: 0 -40px 100px, 0 0 2px, 0 0 0.1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.1em; */
 
         span {
             animation: neon-4 linear infinite 2s;
@@ -171,4 +205,17 @@ main section p {
         }
     }
   
+}
+
+
+h2, .navbar-brand {
+    font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.accent_color {
+    color: #972B93;
 }
